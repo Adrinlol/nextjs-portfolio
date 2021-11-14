@@ -1,0 +1,10 @@
+export const COLOR_BLACK = "#000";
+export const COLOR_WHITE = "#fafafa";
+export const COLOR_GRAY = "#787f85";
+export const COLOR_DARK_GRAY = "#999";
+export const COLOR_MEDIUM_GRAY = "#333333";
+export const COLOR_SPOTIFY_GREEN = "#1DB954";
+export const COLOR_LIGHT_GRAY = "#e5e7eb";
+export const COLOR_BLUE = "#0b63f3";
+export const COLOR_LIGHT_CREAM = "rgba(210, 199, 157, 0.2)";
+export const COLOR_DARK_CREAM = "rgba(239, 234, 218, 1)";
