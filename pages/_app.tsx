@@ -5,6 +5,7 @@ import { Transition } from "components/Layout/Transition";
 
 import { GlobalStyle } from "styles/globalStyles";
 import "styles/nprogress.css";
+import "public/assets/fonts/style.css";
 
 const NProgress = require("nprogress");
 NProgress.configure({ showSpinner: false });
