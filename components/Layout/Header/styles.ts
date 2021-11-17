@@ -36,9 +36,9 @@ export const StickyNav = styled.nav<StringProps>`
 
 export const Wrapper = styled(Flex)<any>`
   position: relative;
-  padding: 3rem 0;
+  padding: 6rem 0 3rem 0;
 
-  h3 {
+  h1 {
     margin: 0;
     cursor: pointer;
   }

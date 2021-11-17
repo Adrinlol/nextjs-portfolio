@@ -57,14 +57,14 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 600;
       letter-spacing: 0.025rem;
       margin-bottom: 1rem;
-      font-size: 2.5125rem;
-      
+      font-size: 2rem;
+
       @media ${devices.tabletL} {
-        font-size: 2.175rem;      
+        font-size: 1.75rem;
       }
 
       @media ${devices.mobileL} {
-        font-size: 1.75rem;      
+        font-size: 1.25rem;
       }
     }
 
