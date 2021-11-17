@@ -1,6 +1,6 @@
 import { Navigation } from "components/Layout/Navigation";
 import { ExternalLinkProps, StringProps } from "helpers/types";
-import ScrollToTop from "components/Layout/ScrollToTop";
+import ScrollToTop from "components/Elements/ScrollToTop";
 
 import { Flex, StyledContainer } from "components/Layout/Container/styles";
 import {
