@@ -17,7 +17,7 @@ export const FooterContainer = styled.footer<StringProps>`
     border-top-width: 1px;
     height: 0;
     border-color: ${({ darkTheme }) =>
-      darkTheme ? COLOR_BLACK : COLOR_LIGHT_GRAY};
+      darkTheme ? COLOR_DARK_GRAY : COLOR_LIGHT_GRAY};
   }
 
   a {
