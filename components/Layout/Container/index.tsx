@@ -36,7 +36,7 @@ export default function Container({ children, ...customMeta }: ContainerProps) {
   useEffect(() => setMounted(true), []);
 
   const changeTheme = () => {
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    setTheme(resolvedTheme === "light" ? "dark" : "light");
   };
 
   return (

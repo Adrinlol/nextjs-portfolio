@@ -112,7 +112,7 @@ export const StyledBody = createGlobalStyle<StringProps>`
     }
 
     ul, p {
-      color: ${({ darkTheme }) => (darkTheme ? COLOR_DARK_GRAY : COLOR_BLACK)};
+      color: ${COLOR_DARK_GRAY};
     }
     
     a:hover, .active {
