@@ -1,5 +1,5 @@
 import { StringProps } from "helpers/types";
-import { ScrollUpContainer } from "components/Layout/ScrollToTop/styles";
+import { ScrollUpContainer } from "components/Elements/ScrollToTop/styles";
 
 export const ScrollToTop = ({ darkTheme }: StringProps) => {
   const scrollUp = () => {
