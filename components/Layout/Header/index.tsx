@@ -16,7 +16,7 @@ export const Header = ({ darkTheme, changeTheme }: HeaderProps) => {
       <Wrapper>
         <Link href="/" passHref>
           <div>
-            <h3>Lasha Kakabadze</h3>
+            <h1>Lasha Kakabadze</h1>
           </div>
         </Link>
         <Flex>
