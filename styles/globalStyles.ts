@@ -57,10 +57,10 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 600;
       letter-spacing: 0.025rem;
       margin-bottom: 1rem;
-      font-size: 2.8125rem;
+      font-size: 2.5125rem;
       
       @media ${devices.tabletL} {
-        font-size: 2.375rem;      
+        font-size: 2.175rem;      
       }
 
       @media ${devices.mobileL} {
@@ -68,14 +68,12 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
 
-    h3 {
+    h2, h3 {
       margin-bottom: 1rem;
       font-weight: 600;
-      font-size: 2rem;   
+      font-size: 1.5rem;      
 
-      @media ${devices.tabletL} {
-        font-size: 1.75rem;      
-      }
+
 
       @media ${devices.mobileL} {
         font-size: 1.25rem;      
@@ -92,7 +90,7 @@ export const GlobalStyle = createGlobalStyle`
       line-height: 28px;
     }
 
-    p, h2, button {
+    p, button {
       font-weight: 400;
       font-size: 1.125rem;
     }
