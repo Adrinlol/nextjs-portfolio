@@ -115,6 +115,8 @@ export const StyledBody = createGlobalStyle<StringProps>`
     input, textarea {
       background-color: ${({ darkTheme }) =>
         darkTheme ? COLOR_WHITE : COLOR_LIGHT_CREAM};
+        width: 100%;
+        border: none;
     }
 
     ul, p {
