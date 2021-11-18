@@ -116,6 +116,7 @@ export const StyledBody = createGlobalStyle<StringProps>`
       background-color: ${({ darkTheme }) =>
         darkTheme ? COLOR_WHITE : COLOR_LIGHT_CREAM};
         width: 100%;
+        min-width: 100%;
         border: none;
     }
 
