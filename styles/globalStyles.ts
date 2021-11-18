@@ -73,8 +73,6 @@ export const GlobalStyle = createGlobalStyle`
       font-weight: 600;
       font-size: 1.5rem;      
 
-
-
       @media ${devices.mobileL} {
         font-size: 1.25rem;      
       }
