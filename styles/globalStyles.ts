@@ -68,6 +68,18 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
 
+    input, textarea {
+      border-radius: 0.25rem;
+      padding: 2rem 0 2rem 1rem;
+      width: 100%;
+      font-family: inherit;
+      font-size: 1.125rem;
+
+      @media ${devices.mobileL} {
+        padding: 2rem 0 2rem 0.5rem;
+      }
+    }
+
     h2, h3 {
       margin-bottom: 1rem;
       font-weight: 600;
@@ -88,7 +100,7 @@ export const GlobalStyle = createGlobalStyle`
       line-height: 28px;
     }
 
-    p, button {
+    p, span,  button {
       font-weight: 400;
       font-size: 1.125rem;
     }
