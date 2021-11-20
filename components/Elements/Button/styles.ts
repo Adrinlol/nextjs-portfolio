@@ -11,7 +11,7 @@ export const PrimaryButtonContainer = styled.button`
   border-radius: 0.25rem;
   height: 46px;
   padding: 12px 30px;
-  margin-top: 34px;
+  margin-top: 32px;
   border: 0;
   width: 180px;
 `;
@@ -23,7 +23,7 @@ export const TextButtonContainer = styled.div`
   position: relative;
   width: auto;
   cursor: pointer;
-  margin-top: 34px;
+  margin-top: 32px;
   transition: all 0.2s;
 
   svg {
