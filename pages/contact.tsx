@@ -2,8 +2,9 @@ import type { NextPage } from "next";
 import { ContentWrapper } from "pages";
 import Container from "components/Layout/Container";
 import ContactSection from "components/Contact";
+import { StringProps } from "helpers/types";
 
-const Contact: NextPage = () => {
+const Contact: NextPage = (secrets: StringProps) => {
   return (
     <Container>
       <ContentWrapper>
@@ -14,9 +15,19 @@ const Contact: NextPage = () => {
           }
         </p>
       </ContentWrapper>
-      <ContactSection />
+      <ContactSection secrets={secrets} />
     </Container>
   );
 };
 
 export default Contact;
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      service_id: process.env.EMAILJS_SERVICE_ID,
+      template_id: process.env.EMAILJS_TEMPLATE_ID,
+      user_id: process.env.EMAILJS_USER_ID,
+    },
+  };
+}
