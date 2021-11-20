@@ -1,14 +1,11 @@
 import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import { Data } from "helpers/types";
 import { Input, Textarea } from "components/Elements/FormElements";
 import { PrimaryButton } from "components/Elements/Button";
 import { ContactFormWrapper } from "./styles";
 
-const service_id = process.env.EMAILJS_SERVICE_ID;
-const template_id = process.env.EMAILJS_TEMPLATE_ID;
-const user_id = process.env.EMAILJS_USER_ID;
-
-const ContactSection = () => {
+const ContactSection = ({ secrets }: Data) => {
   const form = useRef<HTMLFormElement>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -17,14 +14,17 @@ const ContactSection = () => {
     event.preventDefault();
     emailjs
       .sendForm(
-        service_id,
-        template_id,
+        secrets.service_id,
+        secrets.template_id,
         form.current as HTMLFormElement,
-        user_id
+        secrets.user_id
       )
       .then(
         (result) => {
-          setIsLoading(false);
+          if (result.status === 200) {
+            setIsLoading(false);
+            event.target.reset();
+          }
           console.log("result", result);
         },
         (error) => {
@@ -32,7 +32,6 @@ const ContactSection = () => {
           console.log("error", error);
         }
       );
-    event.target.reset();
   };
 
   return (
