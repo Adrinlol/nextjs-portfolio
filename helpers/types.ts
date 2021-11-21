@@ -12,3 +12,24 @@ export interface StringProps {
 export interface Data {
   [key: string]: any;
 }
+
+export interface BurgerMenuProps {
+  isOpen: boolean;
+  onClick: () => void;
+}
+
+export interface PrimaryButtonProps {
+  text: string;
+  loading?: boolean;
+  disabled?: boolean;
+}
+
+export interface CloseModalButtonProps {
+  onClick: () => void | string;
+}
+
+export interface InputProps {
+  placeholder: string;
+  label: string;
+  name: string;
+}

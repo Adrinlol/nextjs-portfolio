@@ -8,6 +8,7 @@ import {
   COLOR_LIGHT_GRAY,
   COLOR_DARK_GRAY,
   COLOR_WHITE,
+  COLOR_LIGHT_CREAM,
 } from "helpers/colorPalette";
 
 export const Section = styled.section`
@@ -109,6 +110,14 @@ export const StyledBody = createGlobalStyle<StringProps>`
     
     a {
       color: ${({ darkTheme }) => (darkTheme ? COLOR_WHITE : COLOR_BLUE)};
+    }
+
+    input, textarea {
+      background-color: ${({ darkTheme }) =>
+        darkTheme ? COLOR_WHITE : COLOR_LIGHT_CREAM};
+        width: 100%;
+        min-width: 100%;
+        border: none;
     }
 
     ul, p {
