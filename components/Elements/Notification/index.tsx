@@ -1,17 +1,35 @@
+import Image from "next/image";
 import { Flex } from "components/Layout/Container/styles";
 import {
   NotificationContainer,
   NotificationContent,
 } from "components/Elements/Notification/styles";
 
-export const Notification = ({ content, isVisible, onClick }: any) => {
+export const Notification = ({ content, isVisible, onClick, variant }: any) => {
   return (
-    <NotificationContainer onClick={onClick}>
-      {isVisible && (
-        <NotificationContent>
-          <Flex>{content}</Flex>
-        </NotificationContent>
+    <>
+      {isVisible && content && (
+        <NotificationContainer onClick={onClick}>
+          <NotificationContent>
+            <Flex>
+              <div>
+                <Image
+                  alt={variant}
+                  placeholder="blur"
+                  blurDataURL="blur"
+                  width="20px"
+                  height="20px"
+                  layout="fixed"
+                  src={`/assets/svg/${
+                    variant === "success" ? "check-mark.svg" : "cross.svg"
+                  }`}
+                />
+              </div>
+              <p>{content}</p>
+            </Flex>
+          </NotificationContent>
+        </NotificationContainer>
       )}
-    </NotificationContainer>
+    </>
   );
 };
