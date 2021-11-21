@@ -2,12 +2,17 @@ import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { Data } from "helpers/types";
 import { Input, Textarea } from "components/Elements/FormElements";
+import { Notification } from "components/Elements/Notification";
 import { PrimaryButton } from "components/Elements/Button";
 import { ContactFormWrapper } from "./styles";
 
 const ContactSection = ({ secrets }: Data) => {
   const form = useRef<HTMLFormElement>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [notifState, setNotifState] = useState<any>({
+    isVisible: false,
+    content: "",
+  });
 
   const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
     setIsLoading(true);
@@ -23,13 +28,27 @@ const ContactSection = ({ secrets }: Data) => {
         (result) => {
           if (result.status === 200) {
             setIsLoading(false);
+            setNotifState({
+              content:
+                "Your message has been sent, I hope to respond in 24 hours.",
+              isVisible: true,
+            });
             event.target.reset();
+            setTimeout(() => {
+              setNotifState({ isVisible: false });
+            }, 3500);
           }
-          console.log("result", result);
         },
-        (error) => {
+        () => {
           setIsLoading(false);
-          console.log("error", error);
+          setNotifState({
+            content:
+              "There was an issue sending your message. Please try again later.",
+            isVisible: true,
+          });
+          setTimeout(() => {
+            setNotifState({ isVisible: false });
+          }, 3500);
         }
       );
   };
@@ -50,6 +69,11 @@ const ContactSection = ({ secrets }: Data) => {
         />
         <PrimaryButton text="Submit" loading={isLoading} />
       </form>
+      <Notification
+        content={notifState.content}
+        isVisible={notifState.isVisible}
+        onClick={() => setNotifState({ isVisible: false })}
+      />
     </ContactFormWrapper>
   );
 };
