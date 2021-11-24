@@ -19,7 +19,9 @@ const Home: NextPage = () => {
             width="100px"
             height="100px"
           />
-          <h2>Welcome to my Portfolio 👋</h2>
+          <Flex justify="flexStart" align="baseline">
+            <h2>Welcome to my Portfolio</h2> 👋
+          </Flex>
           <p>
             Passionate React Developer with 3+ years of experience blending the
             design with programming skills to deliver an immersive and engaging
@@ -36,7 +38,11 @@ export default Home;
 
 export const ContentWrapper = styled.div<StringProps>`
   h2 {
-    margin: 2rem 0;
+    margin: 2rem 0.5rem 2rem 0;
+  }
+
+  ${Flex} {
+    font-size: 1.5rem;
   }
 
   @media ${devices.mobileL} {
